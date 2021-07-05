@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "jrg-poetry-nix-experiment"
+version = "0.1.0"
+description = ""
+authors = ["Raymond Gauthier <jraygauthier@gmail.com>"]
+license = "Apache License 2.0"
+packages = [
+    { include = "myapp" },
+    { include = "myapp/**/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+pillow = "^8.3.0"
+flask = "^2.0.1"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.25.0"
+
+[tool.poetry.scripts]
+myapp = 'myapp:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
