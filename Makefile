@@ -7,3 +7,6 @@ clean:
 
 release:
 	nix-build release.nix
+
+package-poetry-refresh-lockfile:
+	poetry lock --no-update

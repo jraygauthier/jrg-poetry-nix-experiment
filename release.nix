@@ -10,7 +10,7 @@ in
 with pkgs;
 
 let
-  imageappEnv = poetry2nix.mkPoetryEnv {
+  pythonEnv = poetry2nix.mkPoetryEnv {
     python = python38;
     projectDir = ./.;
     editablePackageSources = {
@@ -34,11 +34,12 @@ in
 
     dev = mkShell {
       buildInputs = [
-        imageappEnv
+        pythonEnv
         poetry
         gnumake
       ];
       shellHook = ''
+        export "PYTHON_DEFAULT_INTERPRETER_PATH=${pythonEnv}/bin/python"
       '';
     };
   };

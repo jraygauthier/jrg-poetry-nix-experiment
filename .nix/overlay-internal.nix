@@ -5,9 +5,9 @@ self: super:
 
 let
   poetry2nixSrc = builtins.fetchTarball {
-    # v1.17.1
-    url = "https://github.com/nix-community/poetry2nix//archive/92350882edf748248c5fc59e0721bf8c192bec58.tar.gz";
-    sha256 = "0p4a6y08af5hxpa6l4gf08xkvz3z8x7cs2cvkp3694plbc0as9qk";
+    # v1.29.1
+    url = "https://github.com/nix-community/poetry2nix//archive/88ffae91c605aaafc2797f4096ca9f065152796a.tar.gz";
+    sha256 = "0iq9jlzz92r3ax1ymg00cn4s8c1wi3jgh1693abyyn0baq7gixrb";
   };
 in
 
